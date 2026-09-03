@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+/venv/
+/.venv/
+env/
+ENV/
+
+# Environment files and secrets
+.env
+.env.*
+docker/env/.env.*
+
+# Keep example environment templates
+!docker/env/.env.example.*
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
