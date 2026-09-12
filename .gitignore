@@ -16,6 +16,7 @@ docker/env/.env.*
 
 # Keep example environment templates
 !docker/env/.env.example.*
+!frontend/.env.example
 
 # Logs
 *.log

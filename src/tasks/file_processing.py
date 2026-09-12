@@ -115,10 +115,20 @@ async def _process_project_files(task_instance, project_id: int,
 
         project_files_ids = {}
         if file_id:
-            asset_record = await asset_model.get_asset_record(
-                asset_project_id=project.project_id,
-                asset_name=file_id
-            )
+            asset_record = None
+            try:
+                asset_record = await asset_model.get_asset_by_id(
+                    asset_project_id=project.project_id,
+                    asset_id=int(file_id),
+                )
+            except (TypeError, ValueError):
+                pass
+
+            if asset_record is None:
+                asset_record = await asset_model.get_asset_record(
+                    asset_project_id=project.project_id,
+                    asset_name=file_id
+                )
 
             if asset_record is None:
                 task_instance.update_state(
