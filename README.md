@@ -1,6 +1,6 @@
-# MultiRagAgent
+# MultiRagAPP
 
-MultiRagAgent is a Dockerized FastAPI RAG backend for uploading documents, processing them into chunks, indexing them with embeddings, retrieving relevant chunks, and generating grounded answers.
+MultiRagAPP is a Dockerized FastAPI RAG backend for uploading documents, processing them into chunks, indexing them with embeddings, retrieving relevant chunks, and generating grounded answers.
 
 The current validated runtime uses:
 
